@@ -22,13 +22,13 @@ window.addEventListener("load", ()=> {
                 const {temp_f} = data.current;
                 const {text} = data.current.condition;
                 const{last_updated} = data.current;
-                const {country} = data.location;
+                const {name} = data.location;
                 const {region} = data.location;
                 
                 //set DOM element from the API
                 temperatureDegree.textContent = temp_f;
                 temperatureDescription.textContent = text;
-                locationTimezone.textContent = country + " / " + region;
+                locationTimezone.textContent = name + " / " + region;
                 lastUpdated.textContent = "Last Updated  " + last_updated;
         });
 
